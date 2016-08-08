@@ -1,0 +1,30 @@
+<ion-view view-title="תחביבים">
+
+
+  <ion-content class="hobbiesBody" scroll="false">
+    <div class="container no-border box-shadow">
+
+      <div class="close">
+        <!--<div class="pageClose" ng-click="closeHobbies()">x</div>-->
+        <div  class="closeButton" ng-click="closeHobbies()">X</div>
+      </div>
+      <div style="clear: both;"></div>
+
+      <ion-scroll class="contentHobbies">
+      <div class="hobbiesList">
+        <div class="hobbie ease-all" ng-repeat="hobbie in hobbies" ng-class="{'hobbieSelected':hobbie.selected}" ng-click="optionSelected(hobbie)">
+          <div class="hobbieImg">
+            <img src="https://s3-eu-west-1.amazonaws.com/bnsolutions-essentials/icons/hobbies/{{hobbie.additionals.photo.icon}}">
+          </div>
+          <div class="optionContent">{{hebrewNames[hobbie.key]}}</div>
+        </div>
+      </div>
+      </ion-scroll>
+
+      <div class="submitButton">
+        <input type="submit" value="סיים" ng-click="sendHobbies()" data-ng-disabled="!hasHobbies()">
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

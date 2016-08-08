@@ -1,0 +1,22 @@
+<ion-view view-title="Filter Friends">
+  <ion-content class="filterBody">
+    <div class="wrapper">
+
+        <div class="allUsers" ng-repeat="aprUser in allApartment track by $index">
+        <div class="headerApartment">
+          <span>דירה מספר</span><span> {{$index + 1}}</span>
+        </div>
+        <div class="usersDisplay">
+          <!-- ng-if="resident._id != user._id && resident.isActive" -->
+          <div class="usersApartments col-md-3" ng-repeat="resident in aprUser.data" ng-if="resident.isActive">
+            <div class="fullSizeImage" ng-style="{'background-image':'url({{resident.photo.small}})'}" ng-click="gotoProfile(resident._id)">
+
+            </div>
+            <div class="residentName">{{resident.firstName}}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

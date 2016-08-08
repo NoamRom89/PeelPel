@@ -1,0 +1,138 @@
+
+body {
+  background: #456;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+  height: 100%;
+  background-image: url("../img/login/picture%201.jpg");
+  background-repeat: round;
+}
+
+
+/* The triangle form is achieved by a CSS hack */
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #28d;
+}
+
+.login-header {
+  font-size: 36px;
+  padding: 90px;
+  text-align: center;
+  color: #018e85;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login div {
+  padding: 12px;
+  float: right;
+  width: 100%;
+  margin-top: -9px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 82%;
+  height: 49px;
+  border-bottom: 1px;
+  border-bottom-color: #ffffff;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 22px;
+  direction: rtl;
+  background: rgba(255,255,255, 0.5);
+  float: right;
+}
+
+
+
+.login input[type="submit"] {
+  background: #1bbdb3;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 48px !important;
+  font-size: 27px;
+  font-weight: bold;
+  margin-right: 10%;
+}
+.login input[type=submit][disabled=disabled] {
+  background: rgba(27, 189, 179, 0.3);
+  color: rgba(255, 255, 255, 0.4);
+  margin-right: 10%;
+}
+
+
+.row {
+	    direction: rtl;
+    font-size: 20px;
+}
+
+.forgot {
+  width: 100% !important;
+  height: 50%;
+  padding: 162px !important;
+}
+
+.forgot > a{
+  color: #ffffff;
+  text-decoration: underline;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.forgotPassInput{
+	margin-left: 77px;
+    font-size: 20px;
+    border: 1px;
+    border-style: solid;
+}
+
+.tabs-top {
+	top: 0px;
+}
+
+.form .imageBackground{
+  background-color: #018e85;
+  width: 60px;
+  height: 47px;
+  margin-top: 1px;
+}
+.envelop{
+  background-image: url("../img/login/envelop-copy.png");
+  background-repeat: no-repeat;
+  display: block;
+  width: 71px;
+  height: 48px;
+  border-color: transparent;
+  padding: 25px;
+  position: relative;
+  right: 6px;
+}
+
+.lock{
+  background-image: url("../img/login/lock-copy.png");
+  background-repeat: no-repeat;
+  display: block;
+  border-color: transparent;
+  padding: 23px;
+  position: relative;
+  right: -3px;
+  bottom: 11px;
+}
+
+.submit{
+  margin-top: 53px !important;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="BNSApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <meta http-equiv="Content-Security-Policy" content="img-src * data:; default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' ">
+
+
+    <title></title>
+
+    <!-- IONIC css -->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <!-- BNS Theme -->
+    <!-- <link rel="stylesheet" data-ng-href="stylesheets/{{ app.layout.theme }}.css" /> -->
+    <link rel="stylesheet" data-ng-href="stylesheets/styles.css" />
+    <link rel="stylesheet" data-ng-href="stylesheets/loginStyle.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainArticle.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/articleDisplay.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainFilter.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainNotification.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mainProfile.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/residentProfile.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/survey.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/hobbies.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/settings.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/newActivity.css">
+
+    <!-- Dte Picker Theme -->
+    <!--<link href="lib/angularjs-datepicker/src/css/angular-datepicker.css" rel="stylesheet" type="text/css" />-->
+
+    <link href="lib/datepicker-for-ionic/dist/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+
+    <script src="lib/jquery/jquery-2.1.4.js"></script>
+
+    <script src="lib/angular-websocket/dist/angular-websocket.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-push/ionic-push.js"></script>
+    <script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.js"></script>
+
+    <script src="lib/angular-ui/build/angular-ui.min.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js" ></script>
+    <!--<script src="lib/nginfinitescroll-1.0.0/build/ng-infinite-scroll.js"></script>-->
+
+    <script src="lib/moment/min/moment.min.js"></script>
+
+
+
+    <!-- path to ionic/angularjs js -->
+    <script src="lib/datepicker-for-ionic/dist/templates.min.js"></script>
+    <script src="lib/datepicker-for-ionic/dist/ionic-datepicker.min.js"></script>
+
+
+
+
+    <!-- your app's services js -->
+    <script src="js/services/services.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <!-- your app's factories js -->
+    <script src="js/factories/factory.js"></script>
+
+
+    <!-- your app's factories js -->
+    <!--<script src="js/directives/scroll.js"></script>-->
+
+
+    <!-- your app's controllers js -->
+    <script src="js/controllers/main.js"></script>
+
+
+  </head>
+  <body ng-controller="AppCtrl">
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+
+
+      <!-- Controllers scripts -->
+      <script src="js/controllers/loginCtrl.js"></script>
+    <script src="js/controllers/tabs/tabsCtrl.js"></script>
+      <script src="js/controllers/notifications/notificationCtrl.js"></script>
+      <script src="js/controllers/filterFriends/filterCtrl.js"></script>
+      <script src="js/controllers/calendar/activityCtrl.js"></script>
+    <script src="js/controllers/calendar/newactivityCtrl.js"></script>
+      <script src="js/controllers/calendar/calendarCtrl.js"></script>
+      <script src="js/controllers/profile/profileCtrl.js"></script>
+      <script src="js/controllers/articles/articlesCtrl.js"></script>
+    <script src="js/controllers/settings/settingsCtrl.js"></script>
+      <script src="js/controllers/articles/article.js"></script>
+    <script src="js/controllers/residentProfile/residentProfileCtrl.js"></script>
+    <script src="js/controllers/notifications/notificationCtrl.js"></script>
+    <script src="js/controllers/survey/surveCtrly.js"></script>
+    <script src="js/controllers/hobbies/hobbiesCtrly.js"></script>
+
+    <script src="lib/move-js/move.min.js"></script>
+  </body>
+</html>

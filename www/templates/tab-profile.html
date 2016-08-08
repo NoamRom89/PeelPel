@@ -1,0 +1,57 @@
+<ion-view view-title="פרופיל אישי">
+
+<!--  www/template/tab-profile  -->
+  <ion-content class="bnsprofilepage">
+
+    <div class="backgroundImgProfile">
+        <img ng-show="imgURI === undefined" src="{{backgroundImg}}">
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}" style="text-align: center">
+        <button style="visibility: hidden;" class="button" ng-click="choosePhoto()">
+         ערוך
+        </button>
+    </div>
+
+    <div class="profileImg">
+      <img src="{{connectedUser.photo.medium}}">
+    </div>
+
+    <div class="userInfo">
+      <div>{{connectedUser.firstName}}</div>
+    </div>
+
+    <div ng-repeat="group in groups" ng-init="groupIndex = $index" class="accordion">
+
+      <ion-item class="item-stable"
+                ng-click="toggleGroup(group)"
+                ng-class="{active: isGroupShown(group)}">
+        <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+
+        &nbsp;
+         {{group.nameHeb}}
+        <a ng-if="ifHobbiesName(group);" ng-click="$event.stopPropagation();" ui-sref="hobbies" class="btn btn-blue">לחץ להוספה</a>
+      </ion-item>
+
+      <ion-item class="item-accordion hobbiesSection"
+                ng-repeat="item in group.itemsHobbies"
+                ng-show="isGroupShown(group)">
+
+        <div ng-if="item.additionals.photo.icon">
+          <img src="https://s3-eu-west-1.amazonaws.com/bnsolutions-essentials/icons/hobbies/{{item.additionals.photo.icon}}">
+        </div>
+        <p>{{hebrewNames[item.key]}}</p>
+        <div class="remove" ng-click="removeHobbie(item, groupIndex)" ng-if="hasHobbies">x</div>
+      </ion-item>
+
+
+      <ion-item class="item-accordion"
+                ng-repeat="itemAct in group.itemsActivity"
+                ng-show="isGroupShown(group)">
+        <p ng-click="gotoActivity(itemAct)">{{itemAct.title}}</p>
+        <div class="remove" ng-click="remove(itemAct, groupIndex)" ng-if="hasActivities">x</div>
+      </ion-item>
+
+    </div>
+  </ion-content>
+
+</ion-view>
+

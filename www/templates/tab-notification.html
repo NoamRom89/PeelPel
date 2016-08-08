@@ -1,0 +1,28 @@
+<ion-view view-title="Notification">
+
+  <!--  www/template/tab-filter  -->
+  <ion-content class="containerNotification">
+    <div ng-repeat="not in notifications | orderBy:'createDate'" ng-click="openNotification(not)">
+      <div class="row row-notification">
+
+        <div class="img-notification">
+          <img id="notificationImg" src="{{notificationImg[not.type].small}}">
+        </div>
+
+        <div class="col-md-8 notificationInfo ">
+          <div class="row padd0">
+            <h3 class="marg0">{{not._object.title}}</h3>
+          </div>
+
+          <div class="dateOfSurvey">
+            <span class="size13">{{not.humenDate}}</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+

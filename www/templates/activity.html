@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-content class="activityWrapper">
+
+  <ion-nav-bar class="bnsHeaderActivity">
+    <ion-nav-back-button class="button-icon ion-arrow-left-c" style="display: block;color:#ffffff" ng-click="goBack()">
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+    <div class="content bnsActivity block">
+
+      <div class="activityTime center">
+        <div class="block" style="font-size: 25px;padding-bottom: 10px;">
+          <span> יום </span>
+          <span> {{getDay(activity.start)}} </span>
+        </div>
+
+        <span class="block" style="font-size: 35px;padding-bottom: 10px;  font-weight: 700;">{{showHourFormat()}}</span>
+        <span class="block" style="font-size: 25px;">{{showDateFormat()}}</span>
+      </div>
+
+      <div class="activityTitle center">
+        <h4 class="">{{activity.title}}</h4>
+        <span> {{activity.mission.description}} </span>
+      </div>
+
+
+      <div class="activityDesc" ng-if="activity.description">
+        <h2>תיאור הפעילות</h2>
+        <p>{{activity.description}}</p>
+      </div>
+    </div>
+
+    <div class="block fullsizeimg h40" ng-style="getImageURL(activity)">
+
+    </div>
+  </ion-content>
+</ion-view>

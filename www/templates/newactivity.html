@@ -1,0 +1,121 @@
+<ion-view>
+  <ion-content class="activityWrapper addNewActivityWrapper">
+    <div class="height-small-center">
+      <h2 class="nActivityTitle">צור פעילות חדשה</h2>
+      <ul class="progressbar">
+        <li ng-click="chooseStep(1)" ng-class="{'active': data.step == 1, 'dirty':isDirty(1)}"></li>
+        <li ng-click="chooseStep(2)" ng-class="{'active': data.step == 2, 'dirty':isDirty(2)}"></li>
+        <li ng-click="chooseStep(3)" ng-class="{'active': data.step == 3, 'dirty':isDirty(3)}"></li>
+      </ul>
+      <div class="newActivityCard">
+        <form class="newActivityForm">
+          <div ng-show="data.step == 1">
+            <div class="block">
+              <label>תאריך + שעה</label>
+              <input type="text" ng-model="data.form.start"/>
+            </div>
+            <div class="block">
+              <label>כותרת</label>
+              <input type="text" placeholder="הכנס כותרת"ng-model="data.form.title"/>
+            </div>
+            <!--
+            <div class="footer">
+              <button class="bns-button" ng-click="nextStep()" ng-disabled="isStepDisabled(1)">הבא </button>
+            </div>
+            -->
+          </div>
+
+
+          <div ng-show="data.step == 2">
+            <div class="block">
+              <p> השדות הנ"ל אינם חובה </p>
+            </div>
+
+            <div class="block">
+              <label class="block" style="margin-bottom: 5px;">פרטיות</label>
+              <input type="radio" ng-model="data.form.privacy" name="privacy" value="private"> פרטי
+              <input type="radio" ng-model="data.form.privacy" name="privacy" value="public"> ציבורי
+            </div>
+            <div class="block">
+              <label>תיאור</label>
+              <textarea rows="10" id="new_activity_description" ng-model="data.form.description"></textarea>
+            </div>
+
+            <!-- ADD PHOTO SECTION
+            <div class="block photo fullsizeimg" ng-style="{'background-image':'url({{data.form.photo}})'}">
+              <span class="text-center plus" id="add-photo"> + </span>
+            </div>
+            -->
+
+            <!-- ADD PHOTO SECTION
+            <div class="footer">
+              <button class="bns-button" ng-click="nextStep()" ng-disabled="isStepDisabled(2)">סיים </button>
+            </div>
+              -->
+          </div>
+
+
+          <div ng-show="data.step == 3">
+    <div class="block">
+      <div class="activity-wrapper">
+        <div class="card bnsCard">
+          <a class="date-wrapper-activity" id="{{data.form.start}}">
+
+          <!-- Here should be the description section of the activity: title, time, participants-->
+            <div class="item item-text-wrap bnsMissionDesc">
+              <h2 class="missionTime">{{getActivityTime()}} </h2>
+              <h2 class="missionTitle">{{data.form.title}}</h2>
+              <p class="missionDesc" ng-if="data.form.mission.description? true : false">
+                <span> {{data.form.mission.description}}</span>
+              </p>
+
+                        <!-- Here should be static icons for activity's settings and prefrence -->
+              <div class="list bnsMissionIcons">
+                          <div class="center">
+                            <button ng-class="{'ion-ios-alarm-outline' : !data.form.notify, 'ion-ios-alarm' : data.form.notify}" ng-click="toggleReminder(); $event.stopPropagation();">
+                            </button>
+                            <label>תזכורת</label>
+                          </div>
+
+                          <div>
+                            <button ng-class="{'ion-ios-heart-outline' : !data.form.favorite, 'ion-ios-heart' : data.form.favorite}" ng-click="toggleFavorite();$event.stopPropagation();" >
+                            </button>
+                            <label>מועדפים</label>
+                          </div>
+                          <!--<div ng-if="activity.description? true : false" class="workingProcess">
+                            <button class="ion-ios-list-outline"></button>
+                            <label>שלבי עבודה</label>
+                          </div>-->
+                        </div>
+            </div>
+                    <!-- This section should be visible only if the user or the guide uploaded an img-->
+                    <div class="item item-text-wrap mission-img">
+                      <div class="bnsMissionImage-size">
+                        <div class="fullSizeImage2 center" ng-style="{'background-image':'url({{data.form.photo}})'}">
+                          <span class="plus" id="replace-photo"> + </span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </a>
+        </div>
+
+        </div>
+    </div>
+  </div>
+
+        </form>
+
+      </div>
+      <div ng-show="data.step == 1" class="create">
+        <button class="bns-button" ng-click="nextStep()" ng-disabled="isStepDisabled(1)">הבא </button>
+      </div>
+      <div ng-show="data.step == 2" class="create">
+        <button class="bns-button" ng-click="nextStep()" ng-disabled="isStepDisabled(2)">סיים </button>
+      </div>
+      <div ng-show="data.step == 3" class="create">
+        <button class="bns-button"> צור משימה </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

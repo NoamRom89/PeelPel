@@ -1,0 +1,76 @@
+<ion-view>
+
+  <ion-content class="bnsResidentPage">
+
+    <ion-nav-bar class="residentBar">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c" style="display: block;" ng-click="goBack()">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <div class="backgroundImg">
+        <img src="{{resident.cover.path}}">
+    </div>
+
+    <div class="profileImg">
+      <img src="{{resident.photo.small}}">
+    </div>
+
+    <div class="residentInfo">
+      <div>{{resident.firstName}}</div>
+    </div>
+
+    <div ng-repeat="group in groups" class="accordion">
+
+      <ion-item class="item-stable"
+                ng-click="toggleGroup(group)"
+                ng-class="{active: isGroupShown(group)}">
+        <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+        &nbsp;
+        {{group.nameHeb}}
+      </ion-item>
+
+      <ion-item class="item-accordion hobbiesSection"
+                ng-repeat="item in group.itemsHobbies"
+                ng-show="isGroupShown(group)"
+                ion-track-tap="Hobbies" ion-track-data="{ userId: '{{connectedUser._id}}'}">
+        <div ng-if="item.additionals.photo.icon">
+          <img src="https://s3-eu-west-1.amazonaws.com/bnsolutions-essentials/icons/hobbies/{{item.additionals.photo.icon}}">
+        </div>
+        <p>{{hebrewNames[item.key]}}</p>
+      </ion-item>
+
+      <ion-item class="item-accordion"
+                ng-repeat="itemAct in group.itemsActivity"
+                ng-show="isGroupShown(group)">
+        <p>{{itemAct.title}}</p>
+        <!--ng-click="gotoActivity(itemAct)"-->
+      </ion-item>
+
+    </div>
+
+    <!--<ion-scroll class="resiSocialActivities">-->
+      <!--<div class="eventsList">-->
+        <!--<div class="event" ng-repeat="event in events">-->
+
+          <!--&lt;!&ndash; Here should be the description section of the activity: title, time, participants&ndash;&gt;-->
+          <!--<div class="item item-text-wrap bnsSocialDesc">-->
+            <!--<h2 class="missionTime">{{event.startActivity}}</h2>-->
+            <!--<h2 class="missionTitle">{{event.title}}</h2>-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash; This section should be visible only if the user or the guide uploaded an img&ndash;&gt;-->
+          <!--<div class="item item-text-wrap missionSocial-img">-->
+            <!--<div class="bnsEventImage-size">-->
+              <!--<div class="fullSizeImage2" ng-style="{'background-image':'url({{event.photo.url}})'}"></div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+        <!--</div>-->
+      <!--</div>-->
+    <!--</ion-scroll>-->
+
+
+  </ion-content>
+
+</ion-view>
+

@@ -1,0 +1,43 @@
+.containerNotification{
+  background-color: #EBF2F6;
+  top: 49px;
+}
+.row-notification{
+border-bottom: solid 1px #00D3CF;
+}
+.row-date{
+  margin-right: 5%;
+}
+.row-title{
+  margin-right: 8%;
+}
+.open-notification{
+  margin-top: 8%;
+  float: left;
+}
+.notificationInfo{
+  width: 100%;
+}
+#openNotification{
+  text-decoration: none;
+}
+
+.dateOfSurvey > h4{
+  float: right;
+  margin-right: 3%;
+}
+
+.img-notification{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+#notificationImg{
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  margin-top: 3px;
+}

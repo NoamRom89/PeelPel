@@ -1,0 +1,28 @@
+<ion-view view-title="{{article.title}}">
+  <ion-content class="articlePage">
+
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c" style="display: block;" ng-click="goBack()">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <div class="content has-header">
+      <div class="articleContainer">
+        <div class="row">
+          <div class="headerTitle">
+            <h2 class="articleTitle"><b>{{article.title}}:</b></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="contentArticle">
+            <h3 class="contentDisplay">{{article.content}}</h3>
+          </div>
+        </div>
+
+
+      </div>
+    <h1></h1>
+    </div>
+
+  </ion-content>
+</ion-view>

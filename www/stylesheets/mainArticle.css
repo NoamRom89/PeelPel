@@ -1,0 +1,82 @@
+.mainArticle{
+  position: relative;
+  height: 23.2%;
+  padding: 0;
+  border-bottom: solid 1px #00D3CF;
+}
+.row-articles{
+  direction: rtl;
+  font-size: 20px;
+  width: 100%;
+  padding: 0;
+  height: 55%;
+}
+.img-article{
+  margin-left: 2%;
+  margin-top: 7%;
+  margin-right: 2%;
+}
+.content-article{
+  width: 100%;
+}
+
+.content-article > h3{
+  width: 77%;
+  margin-top: 6%;
+  font-size: 18px;
+}
+.favorit-article{
+  width: 100%;
+  height: 100%;
+}
+.favorit-article button{
+  font-size: 30px;
+  float: left;
+  background-color: transparent;
+  border-color: transparent;
+  margin-left: 7%;
+}
+.favorit-article label{
+  float: left;
+  margin-left: 4px;
+}
+.favorit{
+  width: 20%;
+  height: 33%;
+  position: relative;
+}
+#articleLogo1{
+  width: 90%;
+}
+.articleLogo2{
+  width: 44%;
+}
+.deleteArticle{
+  direction: ltr !important;
+  margin-left: 2%;
+  font-size: 20px;
+  border: solid;
+  border-radius: 20px;
+  border-color: #00D3CF;
+  margin-top: 10px;
+  width: 30px;
+  text-align: center;
+  line-height: 1;
+}
+
+/*fonts article*/
+.articleTitle{
+  font-size: 30px;
+}
+.contentDisplay{
+  font-size: 28px;
+}
+
+.platform-android .bar .title {
+  font-size: 19px;
+  line-height: 44px;
+  width: 35%;
+  margin: 0 auto;
+  direction: rtl;
+}
+

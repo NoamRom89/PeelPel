@@ -1,0 +1,83 @@
+
+<ion-view view-title="Calendar">
+
+  <!--  Date picker element  -->
+  <ionic-datepicker date="currentDate" callback="datePickerCallback" id="move-for-new-activity">
+    <button class="button button-block dateButton marg0 no-radius" >
+      <!-- <span class="beforeDate" ng-click="changeDate($event); $event.stopPropagation();"> < </span>-->
+      <span class="dateDisplyed">{{currentDate | date:'dd/MM/yyyy' }} </span>
+      <span> {{ dateToDay(activity.start) }} </span>
+      <!-- <span class="afterDate" ng-click="changeDate($event); $event.stopPropagation();"> > </span>-->
+    </button>
+  </ionic-datepicker>
+
+
+	<!--  www/template/tab-filter  -->
+  <ion-content class="padding bnsHasDate" on-scroll="gotScrolled()">
+
+    <ion-refresher class="calendarRefresher" pulling-text="משוך לרענון" on-refresh="refreshTasks()"
+                   refreshing-text="מידע מתעדכן..." refreshing-icon="ion-loading-b">
+
+    </ion-refresher>
+
+      <div class="card bnsCard"  ng-repeat="activity in activities | orderBy:'start' track by $index" >
+        <a class="date-wrapper-activity" id="{{activity.start}}" ng-click="gotoActivity(activity)">
+
+          <!-- Here should be the description section of the activity: title, time, participants-->
+          <div class="item item-text-wrap bnsMissionDesc">
+                <h2 class="missionTime">{{activity.startActivity}} </h2>
+                <h2 class="missionTitle">{{activity.title}}</h2>
+                <p class="missionDesc" ng-if="activity.mission.description? true : false">
+                 <span> {{activity.mission.description}}</span>
+                </p>
+
+                <!-- Here should be static icons for activity's settings and prefrence -->
+                  <div class="list bnsMissionIcons">
+                    <div class="center">
+                      <button ng-class="{'ion-ios-alarm-outline' : !activity.notify, 'ion-ios-alarm' : activity.notify}" ng-click="reminder(activity); $event.stopPropagation();">
+                      </button>
+                      <label>תזכורת</label>
+                    </div>
+
+                    <div>
+                      <button ng-class="{'ion-ios-heart-outline' : !activity.favorit, 'ion-ios-heart' : activity.favorit}" ng-click="favoritesBtn(activity);$event.stopPropagation();" >
+                      </button>
+                      <label>מועדפים</label>
+                    </div>
+                    <div ng-if="activity.description? true : false" class="workingProcess">
+                      <button class="ion-ios-list-outline"></button>
+                      <label>שלבי עבודה</label>
+                    </div>
+                  </div>
+
+          </div>
+
+          <!-- This section should be visible only if the user or the guide uploaded an img-->
+          <div class="item item-text-wrap mission-img">
+              <div class="bnsMissionImage-size">
+                <div class="fullSizeImage2" ng-style="{'background-image':'url({{activity.photo.url}})'}"></div>
+              </div>
+          </div>
+
+
+
+        </a>
+      </div>
+
+    <ion-infinite-scroll on-infinite="loadMore()" ng-if="!moredata" distance="10%">
+    </ion-infinite-scroll>
+    <div class="noActivity" ng-if="activities.length == 0">
+      <div>אין פעילויות</div>
+    </div>
+
+
+  </ion-content>
+
+  <div class="fbAddActivity" ng-click="addNewActivity()">
+    <button class="stuck">
+      <span> + </span>
+    </button>
+  </div>
+
+</ion-view>
+

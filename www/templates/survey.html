@@ -1,0 +1,46 @@
+<ion-view view-title="סקר">
+
+
+  <ion-content class="surveyBody" scroll="false">
+    <div class="container no-border box-shadow">
+
+      <div class="close">
+        <div  class="closeButton" ng-click="closeSurvey()">X</div>
+      </div>
+
+      <div class="info">
+        <h2>{{survey.title}}</h2>
+        <p class="surveyInfo">{{survey.content}}</p>
+      </div>
+
+      <div class="surveyDate"><!-- here survey.experiationDate should be display-->
+        <div>{{date}}</div>
+        <div>|</div>
+        <div>{{time}}</div>
+      </div>
+
+      <!-- Here shuld be a ng-repeat for all survey's options -->
+      <div class="optionsList" ng-repeat="option in survey.options" ng-class="{'optionSelected':option.pressed}">
+        <div class="option">
+          <div class="inputCustom">
+            <input type="checkbox" ng-model="option.pressed" ng-click="optionSelected($index,survey.options)" class="checkButton">
+          </div>
+          <div class="optionContent">{{option.name}}</div>
+
+          <div class="optionImgSurvey" ng-style="{'background-image':'url({{s3CategoriesLink + optionImg[option.category]}})'}"  ng-if="optionImg[option.category] && (!option.photo || !option.photo.small)">
+
+          </div>
+          <div class="optionImgSurvey" ng-init="option.imgUrl = optionImg['default'].small" ng-style="{'background-image':'url({{option.photo.small}})'}"  ng-if="option.photo && option.photo.small">
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="submitButtonSurvey" ng-if="!userVoted()">
+        <input type="submit" value="שלח\י את תוצאתך" ng-click="sendVote()" ng-model="optionPressed.length" ng-disabled="!optionPressed.length > 0">
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

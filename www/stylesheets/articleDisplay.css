@@ -1,0 +1,16 @@
+.articlePage{
+  /*top: -23px;*/
+  /*position: relative;*/
+}
+
+.articleContainer{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+.headerTitle{
+  border-bottom: solid 1px #387ef5;
+}
+.contentArticle{
+  margin-top: 40px;
+}

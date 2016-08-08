@@ -1,0 +1,35 @@
+<ion-view view-title="Articles">
+
+  <!--  www/template/tab-filter  -->
+  <ion-content class=" bnsHasTabs">
+    <ion-refresher pulling-text="משוך לרענון" on-refresh="refreshTasks()"
+                   refreshing-text="מידע מתעדכן..." refreshing-icon="ion-loading-b"
+      ></ion-refresher>
+
+    <div class="mainArticle" ng-repeat="article in testShowArticle track by $index">
+
+      <div class="deleteArticle">
+        <div ng-click="deleteArticle(article,$index)">
+          <i class="ion-close"></i>
+        </div>
+      </div>
+      <div class="row row-articles">
+        <div class="img-article" ng-class="initImgLogo(article.credit.name)">
+          <img id="articleLogo1" src="{{article.credit.logo}}">
+        </div>
+        <div class="content-article">
+          <h3 ng-click="passToArticle(article)"><b>{{article.title}}</b></h3>
+        </div>
+      </div>
+
+      <div class="favorit">
+        <div class="favorit-article">
+          <button ng-class="{'ion-ios-heart-outline' : !article.favorit, 'ion-ios-heart' : article.favorit}" ng-click="favoritesBtn(article)" >
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </ion-content>
+
+</ion-view>

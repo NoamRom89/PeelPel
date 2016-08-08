@@ -1,0 +1,41 @@
+<!--  www/template/tabs  -->
+<ion-view>
+  <ion-tabs class="tabs-icon-top tabs-color-active-positive tabs-top bnsTabs">
+
+    <!-- Settings Tab -->
+    <ion-tab class="settingsTab" icon-off="ion-navicon-round" icon-on="ion-navicon-round" href="tab/settings">
+      <ion-nav-view name="tab-settings"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Social articles Tab -->
+    <!--<ion-tab title="כתבות" icon-off="ion-ios-book-outline" icon-on="ion-ios-book" href="tab/articles">-->
+      <!--<ion-nav-view name="tab-articles"></ion-nav-view>-->
+    <!--</ion-tab>-->
+
+    <!-- Filter Tab -->
+    <ion-tab title="חיפוש" icon-off="ion-ios-search" icon-on="ion-ios-search-strong" href="tab/filter">
+      <ion-nav-view name="tab-filter"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Calendar Tab -->
+    <ion-tab title="יומן" icon-off="ion-calendar" icon-on="ion-calendar" href="tab/calendar">
+      <ion-nav-view name="tab-calendar"></ion-nav-view>
+    </ion-tab>
+
+    <!-- Notification Tab -->
+    <ion-tab title="התראות" icon-off="ion-android-notifications-none" icon-on="ion-android-notifications-none" href="tab/notification"
+             badge="numOfNotifications">
+      <ion-nav-view name="tab-notification"></ion-nav-view>
+    </ion-tab>
+
+    <!-- User Profile Tab -->
+    <ion-tab icon="bnsUserProfileTab" class="profile" href="tab/profile">
+      <ion-nav-view name="tab-profile"></ion-nav-view>
+    </ion-tab>
+
+
+  </ion-tabs>
+
+
+</ion-view>
+

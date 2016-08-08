@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.io-config.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ionic.project" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/calendar/activityCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/calendar/newactivityCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/filterFriends/filterCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/notifications/notificationCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/controllers/tabs/tabsCtrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/directives/scroll.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/factories/factory.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/js/services/services.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/lib/ngInfiniteScroll-1.0.0/build/ng-infinite-scroll.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/hobbies.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/mainArticle.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/mainFilter.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/mainNotification.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/mainProfile.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/newActivity.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/residentProfile.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/settings.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/styles.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/stylesheets/survey.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/article.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/residentProfile.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/templates/tab-notification.html" charset="UTF-8" />
+  </component>
+</project>

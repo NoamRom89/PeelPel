@@ -1,0 +1,25 @@
+<ion-view title="Login" >
+  <ion-content>
+      <div class="login">
+
+        <h2 class="login-header">!שלום לך</h2>
+
+        <form class="form">
+          <div>
+            <div class="imageBackground"><img class="envelop"></div>
+            <input type="text" ng-model="login.username.value" name="{{login.username.key}}" placeholder="{{login.username.placeholder}}">
+          </div>
+
+          <div>
+            <div class="imageBackground"><img class="lock"></div>
+            <input type="password"  ng-model="login.password.value" name="{{login.password.key}}" placeholder="{{login.password.placeholder}}">
+          </div>
+
+          <div class="submit"><input type="submit" value= "כניסה" ng-disabled="!login.isDisabled()" ng-click="login.signIn()"></div>
+        </form>
+        <!--<div class="forgot">-->
+          <!--<a ui-sref="loginForgot"> שכחתי סיסמא </a>-->
+        <!--</div>-->
+      </div>
+  </ion-content>
+</ion-view>
